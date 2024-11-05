@@ -31,25 +31,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendMessage = async () => {
     const userMessage = chatInput.value.trim();
     if (!userMessage) return;
-
+  
     displayMessage(userMessage, "user");
     chatInput.value = "";
-
+  
     try {
-      // Hacer la solicitud a la API en Vercel en lugar del Worker directamente
       const response = await fetch("/api/worker", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ input: userMessage })
       });
-
-      const data = await response.json();
-      displayMessage(data.response, "bot");
+  
+      // Verifica si la respuesta es JSON
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        const data = await response.json();
+  
+        // Accede al primer elemento del array y luego a la propiedad response
+        if (data.length > 0 && data[0].response) {
+          displayMessage(data[0].response.response, "bot");
+        } else {
+          throw new Error("Respuesta no válida del servidor");
+        }
+      } else {
+        throw new Error("Respuesta no válida del servidor");
+      }
     } catch (error) {
       console.error("Error en el chatbot:", error);
       displayMessage("Error al contactar el chatbot. Intenta nuevamente más tarde.", "bot");
     }
   };
+  
 
   // Mostrar mensajes en la ventana de chat
   const displayMessage = (message, sender) => {
