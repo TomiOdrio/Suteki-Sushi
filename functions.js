@@ -64,12 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   // Mostrar mensajes en la ventana de chat
+  // const displayMessage = (message, sender) => {
+  //   const messageElement = document.createElement("div");
+  //   messageElement.classList.add("chat-message", sender);
+  //   messageElement.textContent = message;
+  //   messagesContainer.appendChild(messageElement);
+  //   messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  // };
   const displayMessage = (message, sender) => {
     const messageElement = document.createElement("div");
-    messageElement.classList.add("chat-message", sender);
+    messageElement.classList.add(sender === "bot" ? "bot-message" : "user-message");
     messageElement.textContent = message;
-    messagesContainer.appendChild(messageElement);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    document.getElementById("chatbot-messages").appendChild(messageElement);
+    document.getElementById("chatbot-messages").scrollTop = document.getElementById("chatbot-messages").scrollHeight;
   };
 
   // Enviar mensaje al hacer clic en el botón o presionar Enter
