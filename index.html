@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suteki Sushi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="functions.js"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-[#FFF5E6] text-gray-800 font-sans">
+        <header class="bg-red-700 text-white py-4">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Suteki Sushi</h1>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#inicio" class="hover:text-red-200">Inicio</a>
+                    <a href="#menu" class="hover:text-red-200">Menú</a>
+                    <a href="#pedido" class="hover:text-red-200">Cómo Pedir</a>
+                    <a href="#contacto" class="hover:text-red-200">Contacto</a>
+                </nav>
+                <button id="menuButton" class="md:hidden">
+                    <span id="menuIcon" class="transform transition-transform">▼</span>
+                </button>
+            </div>
+        </header>
+        
+        <div id="mobileMenu" class="hidden md:hidden bg-red-700 text-white">
+            <nav class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+                <a href="#inicio" class="hover:text-red-200">Inicio</a>
+                <a href="#menu" class="hover:text-red-200">Menú</a>
+                <a href="#pedido" class="hover:text-red-200">Cómo Pedir</a>
+                <a href="#contacto" class="hover:text-red-200">Contacto</a>
+            </nav>
+        </div>
+
+        <main>
+            <section id="inicio" class="py-20 bg-[#FFF5E6] text-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-4xl font-bold mb-4">Bienvenidos a Suteki Sushi</h2>
+                    <p class="text-xl mb-8">Sabor oriental, pasión argentina: ¡El sushi que conquistará tu paladar!</p>
+                    <a href="#menu" class="bg-red-700 text-white px-6 py-3 rounded-full hover:bg-red-600 transition-colors">Ver Menú</a>
+                </div>
+            </section>
+
+            <!-- Menú Destacado -->
+            <section id="menu" class="py-20 bg-white">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold mb-12">Nuestro Menú Destacado</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
+                            <img src="placeholder.svg" alt="Sushi Clásico" class="w-full h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Sushi Clásico</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
+                            <img src="placeholder.svg" alt="Rolls Especiales" class="w-full h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Rolls Especiales</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
+                            <img src="placeholder.svg" alt="Combos Familiares" class="w-full h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Combos Familiares</h3>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cómo Hacer Pedido -->
+            <section id="pedido" class="py-20 bg-[#FFF5E6] text-center">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold mb-12">Cómo Hacer Tu Pedido</h2>
+                    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+                        <!-- Pasos para hacer pedido -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacto -->
+            <section id="contacto" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">Contáctanos</h2>
+                    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center"><span>Av. Corrientes 1234, CABA, Argentina</span></li>
+                                <li class="flex items-center"><span>+54 11 1234-5678</span></li>
+                                <li class="flex items-center"><span>info@sutekisushi.com</span></li>
+                            </ul>
+                        </div>
+                        <form class="flex-1 w-full max-w-md">
+                            <!-- Formulario de contacto -->
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-red-700 text-white py-8 text-center">
+            <div class="container mx-auto px-4">
+                <p>&copy; 2023 Suteki Sushi. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <!-- Botón flotante para el chatbot -->
+        <button id="chatbot-toggle" class="chatbot-button">💬</button>
+
+        <!-- Ventana emergente del chat -->
+        <div id="chatbot-window" class="chatbot-window hidden">
+            <div class="chat-header">
+                <span>Chat de Suteki Sushi</span>
+                <button id="close-chat" class="close-button">✕</button>
+            </div>
+            <div id="chatbot-messages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatbot-input" placeholder="Escribe un mensaje...">
+                <button id="send-message">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
