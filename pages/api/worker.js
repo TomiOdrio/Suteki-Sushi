@@ -13,6 +13,7 @@ export default async function handler(req, res) {
       });
   
       const data = await response.json();
+      console.log("Respuesta del Worker:", data); // Agrega esta línea
       res.status(200).json(data);
     } catch (error) {
       console.error("Error en la API de Vercel:", error);
