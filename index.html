@@ -5,108 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suteki Sushi</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script defer src="functions.js"></script>
 </head>
 <body>
-    <div class="min-h-screen bg-[#FFF5E6] text-gray-800 font-sans">
-        <header class="bg-red-700 text-white py-4">
-            <div class="container mx-auto px-4 flex justify-between items-center">
-                <h1 class="text-2xl font-bold">Suteki Sushi</h1>
-                <nav class="hidden md:flex space-x-4">
-                    <a href="#inicio" class="hover:text-red-200">Inicio</a>
-                    <a href="#menu" class="hover:text-red-200">Menú</a>
-                    <a href="#pedido" class="hover:text-red-200">Cómo Pedir</a>
-                    <a href="#contacto" class="hover:text-red-200">Contacto</a>
-                </nav>
-                <button id="menuButton" class="md:hidden">
-                    <span id="menuIcon" class="transform transition-transform">▼</span>
-                </button>
+    <div class="min-h-screen">
+        <header class="header">
+            <div class="container">
+                <h1 class="text-4xl font-bold mb-2">Suteki Sushi</h1>
+                <p class="text-xl">Sabor oriental, pasión argentina</p>
             </div>
         </header>
-        
-        <div id="mobileMenu" class="hidden md:hidden bg-red-700 text-white">
-            <nav class="container mx-auto px-4 py-2 flex flex-col space-y-2">
-                <a href="#inicio" class="hover:text-red-200">Inicio</a>
-                <a href="#menu" class="hover:text-red-200">Menú</a>
-                <a href="#pedido" class="hover:text-red-200">Cómo Pedir</a>
-                <a href="#contacto" class="hover:text-red-200">Contacto</a>
-            </nav>
-        </div>
 
         <main>
-            <section id="inicio" class="py-20 bg-[#FFF5E6] text-center">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-4xl font-bold mb-4">Bienvenidos a Suteki Sushi</h2>
-                    <p class="text-xl mb-8">Sabor oriental, pasión argentina: ¡El sushi que conquistará tu paladar!</p>
-                    <a href="#menu" class="bg-red-700 text-white px-6 py-3 rounded-full hover:bg-red-600 transition-colors">Ver Menú</a>
-                </div>
-            </section>
-
-            <!-- Menú Destacado -->
-            <section id="menu" class="py-20 bg-white">
-                <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-3xl font-bold mb-12">Nuestro Menú Destacado</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
-                            <img src="placeholder.svg" alt="Sushi Clásico" class="w-full h-40 object-cover rounded-md mb-4">
+            <section class="py-20 bg-white">
+                <div class="container">
+                    <h2 class="text-3xl font-bold text-center mb-12">Descubre nuestra experiencia culinaria</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Sushi Clásico" class="mb-4 rounded-lg">
                             <h3 class="text-xl font-semibold mb-2">Sushi Clásico</h3>
-                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="text-gray-600">Sumérgete en la autenticidad de nuestro sushi tradicional, donde cada bocado es un viaje a Japón.</p>
                         </div>
-                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
-                            <img src="placeholder.svg" alt="Rolls Especiales" class="w-full h-40 object-cover rounded-md mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Rolls Especiales" class="mb-4 rounded-lg">
                             <h3 class="text-xl font-semibold mb-2">Rolls Especiales</h3>
-                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="text-gray-600">Explora nuestras creaciones únicas que fusionan sabores argentinos con la técnica japonesa.</p>
                         </div>
-                        <div class="bg-[#FFF5E6] p-6 rounded-lg shadow-md">
-                            <img src="placeholder.svg" alt="Combos Familiares" class="w-full h-40 object-cover rounded-md mb-4">
+                        <div class="card">
+                            <img src="https://via.placeholder.com/300x200" alt="Combos Familiares" class="mb-4 rounded-lg">
                             <h3 class="text-xl font-semibold mb-2">Combos Familiares</h3>
-                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p class="text-gray-600">Comparte la experiencia Suteki con tus seres queridos con nuestras generosas opciones para grupos.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Cómo Hacer Pedido -->
-            <section id="pedido" class="py-20 bg-[#FFF5E6] text-center">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl font-bold mb-12">Cómo Hacer Tu Pedido</h2>
-                    <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-                        <!-- Pasos para hacer pedido -->
-                    </div>
+            <section class="py-20 bg-light">
+                <div class="container text-center">
+                    <h2 class="text-3xl font-bold mb-8">¿Listo para deleitar tu paladar?</h2>
+                    <p class="text-xl mb-8">Haz tu pedido ahora y disfruta de la mejor experiencia de sushi en la comodidad de tu hogar.</p>
+                    <a href="https://pedir.suteki.com.ar/menu/SutekiCastelar/Delivery" class="btn">Realizar Pedido</a>
                 </div>
             </section>
 
-            <!-- Contacto -->
-            <section id="contacto" class="py-20 bg-white">
-                <div class="container mx-auto px-4">
-                    <h2 class="text-3xl font-bold text-center mb-12">Contáctanos</h2>
-                    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
+            <section class="py-20 bg-white">
+                <div class="container">
+                    <h2 class="text-3xl font-bold text-center mb-12">Nuestra Ubicación</h2>
+                    <div class="flex-container">
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8391711189!2d-58.38158168477038!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sAv.%20Corrientes%201234%2C%20C1043AAZ%20CABA!5e0!3m2!1sen!2sar!4v1637344235729!5m2!1sen!2sar"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="contact-info">
+                            <h3 class="text-2xl font-semibold mb-4">Información de Contacto</h3>
                             <ul class="space-y-4">
-                                <li class="flex items-center"><span>Av. Corrientes 1234, CABA, Argentina</span></li>
-                                <li class="flex items-center"><span>+54 11 1234-5678</span></li>
-                                <li class="flex items-center"><span>info@sutekisushi.com</span></li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span>Av. Corrientes 1234, CABA, Argentina</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                    <span>+54 11 1234-5678</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>info@sutekisushi.com</span>
+                                </li>
                             </ul>
                         </div>
-                        <form class="flex-1 w-full max-w-md">
-                            <!-- Formulario de contacto -->
-                        </form>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="bg-red-700 text-white py-8 text-center">
-            <div class="container mx-auto px-4">
+        <footer class="footer">
+            <div class="container">
                 <p>&copy; 2023 Suteki Sushi. Todos los derechos reservados.</p>
             </div>
         </footer>
 
-        <!-- Botón flotante para el chatbot -->
-        <button id="chatbot-toggle" class="chatbot-button">💬</button>
+        <button id="chatbot-toggle" class="chatbot-button hover:scale-105 transition-all">💬</button>
 
-        <!-- Ventana emergente del chat -->
         <div id="chatbot-window" class="chatbot-window hidden">
             <div class="chat-header">
                 <span>Chat de Suteki Sushi</span>
@@ -115,7 +104,7 @@
             <div id="chatbot-messages" class="chat-messages"></div>
             <div class="chat-input">
                 <input type="text" id="chatbot-input" placeholder="Escribe un mensaje...">
-                <button id="send-message">Enviar</button>
+                <button id="send-message" class="hover:scale-105 transition-all">Enviar</button>
             </div>
         </div>
     </div>

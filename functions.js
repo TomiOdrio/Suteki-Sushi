@@ -1,14 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-
-    menuButton.addEventListener('click', function () {
-        mobileMenu.classList.toggle('hidden');
-        menuIcon.classList.toggle('rotate-180');
-    });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const chatbotToggle = document.getElementById("chatbot-toggle");
   const chatbotWindow = document.getElementById("chatbot-window");
