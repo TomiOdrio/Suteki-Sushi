@@ -245,7 +245,7 @@ body {
   background-color: #ff6347;
   color: white;
   border: none;
-  padding: 12px 16px;
+  padding: 16px 16px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -261,6 +261,8 @@ body {
   bottom: 80px;
   right: 20px;
   width: 300px;
+  max-height: 70%;
+  overflow-y: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -289,6 +291,7 @@ body {
 }
 
 .chat-input {
+  margin-top: auto;
   display: flex;
   padding: 10px;
   border-top: 1px solid #ddd;
